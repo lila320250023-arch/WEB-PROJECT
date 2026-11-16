@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <title>Staff dashboard – JustWait</title>
+</head>
+<body data-page="dashboard">
+    <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">Q</span>
+      <span><strong>JustWait</strong><small>Student Services</small></span></a>
+    <nav class="header-actions" aria-label="Main">
+      <span class="status">Services available</span>
+      <a class="staff" href="login.html">Staff sign in</a>
+    </nav>
+  </header>
+  <main class="page">
+    <div class="toolbar">
+      <div><p class="eyebrow">Staff dashboard</p><h1 style="margin:8px 0 0;font-size:2.2rem">Manage queues</h1></div>
+      <div class="toolbar"><button class="btn ghost" id="reset" style="margin:0">Reset demo data</button>
+        <button class="btn" id="signout">Sign out</button></div>
+    </div>
+    <p class="notice" id="called" role="status"></p>
+    <div id="lists"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

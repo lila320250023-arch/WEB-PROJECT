@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join a queue – JustWait</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="join">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">Q</span>
+      <span><strong>JustWait</strong><small>Student Services</small></span></a>
+    <nav class="header-actions" aria-label="Main">
+      <span class="status">Services available</span>
+      <a class="staff" href="login.html">Staff sign in</a>
+    </nav>
+  </header>
+  <main class="page">
+    <a class="back" href="index.html">← Back to services</a>
+    <div class="split">
+      <section>
+        <p class="eyebrow">Step 1 of 1</p>
+        <h1 id="join-title">Join the queue</h1>
+        <p class="lead">Enter your details below. We'll create your ticket and save your place in line.</p>
+        <form id="join-form" novalidate>
+          <div class="field" id="advisor-field" hidden>
+            <div class="field-head"><label for="advisor">Academic advisor</label></div>
+            <select id="advisor"></select>
+          </div>
+          <div class="field">
+            <div class="field-head"><label for="name">Full name</label><small>REQUIRED</small></div>
+            <input id="name" type="text" placeholder="e.g. Alex Johnson" autocomplete="name" autofocus>
+            <p class="error" id="name-error" role="alert"></p>
+          </div>
+          <div class="field">
+            <div class="field-head"><label for="sid">Student ID</label><small>REQUIRED</small></div>
+            <input id="sid" type="text" placeholder="e.g. S1024">
+            <p class="hint">For this prototype, use any ID from S1001 to S1100.</p>
+            <p class="error" id="sid-error" role="alert"></p>
+          </div>
+          <button class="btn" type="submit">Confirm and join queue →</button>
+          <p class="privacy">Your information is only visible to authorized staff.</p>
+        </form>
+      </section>
+      <aside class="summary" aria-label="Queue summary">
+        <span class="icon" id="summary-icon"></span>
+        <p class="eyebrow" style="margin-top:24px">You're joining</p>
+        <h2 id="service-title"></h2>
+        <div class="row"><span>People waiting</span><b id="waiting"></b></div>
+        <div class="row"><span>Most recently called</span><b id="last"></b></div>
+        <div class="row"><span>Estimated wait<br>Approximately <span id="wait"></span> minutes</span></div>
+      </aside>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
